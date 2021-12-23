@@ -1,0 +1,493 @@
+{
+  "Syntax": {
+    "ProtobufVersion": "proto3",
+    "ProtobufVersionQuote": "\"proto3\"",
+    "Comments": null,
+    "InlineComment": null,
+    "Meta": {
+      "Pos": {
+        "Filename": "test.proto",
+        "Offset": 0,
+        "Line": 1,
+        "Column": 1
+      },
+      "LastPos": {
+        "Filename": "",
+        "Offset": 0,
+        "Line": 0,
+        "Column": 0
+      }
+    }
+  },
+  "ProtoBody": [
+    {
+      "Name": "example.playbook",
+      "Comments": null,
+      "InlineComment": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "test.proto",
+          "Offset": 20,
+          "Line": 3,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 0,
+          "Line": 0,
+          "Column": 0
+        }
+      }
+    },
+    {
+      "MessageName": "Task0Request",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "user_name",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 72,
+              "Line": 6,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "int32",
+          "FieldName": "id",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 96,
+              "Line": 7,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "test.proto",
+          "Offset": 47,
+          "Line": 5,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "test.proto",
+          "Offset": 110,
+          "Line": 8,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "Task0Response",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "username",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 139,
+              "Line": 11,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "int32",
+          "FieldName": "id",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 162,
+              "Line": 12,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "data",
+          "FieldNumber": "3",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 178,
+              "Line": 13,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "test.proto",
+          "Offset": 113,
+          "Line": 10,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "test.proto",
+          "Offset": 195,
+          "Line": 14,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "Task1Request",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "username",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 223,
+              "Line": 17,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "int32",
+          "FieldName": "id",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 246,
+              "Line": 18,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "data",
+          "FieldNumber": "3",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 262,
+              "Line": 19,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "test.proto",
+          "Offset": 198,
+          "Line": 16,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "test.proto",
+          "Offset": 279,
+          "Line": 20,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "Task1Response",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "something",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 308,
+              "Line": 23,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "test.proto",
+          "Offset": 282,
+          "Line": 22,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "test.proto",
+          "Offset": 330,
+          "Line": 24,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "ServiceName": "ExampleRoute",
+      "ServiceBody": [
+        {
+          "RPCName": "Task0",
+          "RPCRequest": {
+            "IsStream": false,
+            "MessageType": "Task0Request",
+            "Meta": {
+              "Pos": {
+                "Filename": "test.proto",
+                "Offset": 368,
+                "Line": 27,
+                "Column": 13
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "RPCResponse": {
+            "IsStream": false,
+            "MessageType": "Task0Response",
+            "Meta": {
+              "Pos": {
+                "Filename": "test.proto",
+                "Offset": 391,
+                "Line": 27,
+                "Column": 36
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "Options": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 358,
+              "Line": 27,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "test.proto",
+              "Offset": 408,
+              "Line": 27,
+              "Column": 53
+            }
+          }
+        },
+        {
+          "RPCName": "Task1",
+          "RPCRequest": {
+            "IsStream": false,
+            "MessageType": "Task1Request",
+            "Meta": {
+              "Pos": {
+                "Filename": "test.proto",
+                "Offset": 422,
+                "Line": 28,
+                "Column": 13
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "RPCResponse": {
+            "IsStream": false,
+            "MessageType": "Task1Response",
+            "Meta": {
+              "Pos": {
+                "Filename": "test.proto",
+                "Offset": 445,
+                "Line": 28,
+                "Column": 36
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "Options": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "test.proto",
+              "Offset": 412,
+              "Line": 28,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "test.proto",
+              "Offset": 462,
+              "Line": 28,
+              "Column": 53
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "test.proto",
+          "Offset": 333,
+          "Line": 26,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "test.proto",
+          "Offset": 464,
+          "Line": 29,
+          "Column": 1
+        }
+      }
+    }
+  ],
+  "Meta": {
+    "Filename": "test.proto"
+  }
+}

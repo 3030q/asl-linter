@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package example.playbook;
+
+message GetIncident {
+    uint64 id = 1;
+}
+message Incident {
+    uint64 id = 1;
+    string user_name = 2;
+    repeated string ip = 3;
+    bool admin = 4;
+}
+
+message GetEnrichIP {
+    repeated string ip = 1;
+}
+
+message GetGeoIP {
+    string ip = 1;
+}
+
+message GeoIP {
+    string ip = 1;
+    string geo = 2;
+}
+
+message EnrichIP {
+    repeated EnrichedIP enriched_ip = 1;
+}
+
+message BlockUser {
+    string user_name = 1;
+}
+
+message ResultBlockUser {
+    string user_name = 1;
+    bool result = 2; 
+}
+
+message DoAction {
+    string Incident = 1;
+}
+
+message ResultAction {
+    repeated ResultBlockUser user = 1;
+    repeated EnrichIP ip = 2;
+}
+
+service ExamplePLaybook {
+    rpc Task0 (GetIncident) returns (Incident) {}
+    rpc Parallel0 (DoAction) returns (ResultAction) {}
+    rpc Task1 (BlockUser) returns (ResultBlockUser) {}
+    rpc Map0 (GetEnrichIP) returns (EnrichIP) {}
+    rpc Task2 (GetGeoIP) returns (GeoIP) {}
+}

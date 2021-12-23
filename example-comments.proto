@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+package example.playbook;
+
+// 
+// Структура запроса инцидента 
+message GetIncident {
+    uint64 id = 1;
+}
+// Структура самого инцидента
+message Incident {
+    uint64 id = 1;
+    string user_name = 2;
+    repeated string ip = 3;
+    bool admin = 4;
+}
+// 
+
+//
+// Изначально запрос идёт в функцию map 
+message GetEnrichIP {
+    repeated string ip = 1;
+}
+// Функция map итерирует содержимое и передаёт в скрипт
+message GetGeoIP {
+    string ip = 1;
+}
+// Скрипт обогащает данные и возвращает словарь
+message GeoIP {
+    string ip = 1;
+    string geo = 2;
+}
+// Функция map схлопывает всё обратно в список
+message EnrichIP {
+    repeated EnrichedIP enriched_ip = 1;
+}
+//
+
+// 
+//Допустим если пользователь - админ, то его УЗ блокируется 
+message BlockUser {
+    string user_name = 1;
+}
+// Тогда в ответ мы ждём True или False
+message ResultBlockUser {
+    string user_name = 1;
+    bool result = 2;
+}
+// 
+
+// 
+// Функция Parallel возвращает несколько списков
+// которые идут в той же последовательности,
+// в которой были заданы
+// На вход она принимает все данные, которые входят в инцидент
+message DoAction {
+    string Incident = 1;
+}
+// Возвращает несколько списков с резульататми работы функций
+message ResultAction {
+    repeated ResultBlockUser user = 1;
+    repeated EnrichIP ip = 2;
+}
+
+service ExamplePLaybook {
+    rpc Task0 (GetIncident) returns (Incident) {}
+    rpc Parallel0 (DoAction) returns (ResultAction) {}
+    rpc Task1 (BlockUser) returns (ResultBlockUser) {}
+    rpc Map0 (GetEnrichIP) returns (EnrichIP) {}
+    rpc Task2 (GetGeoIP) returns (GeoIP) {}
+}

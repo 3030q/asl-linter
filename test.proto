@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package example.playbook;
+
+message Task0Request {
+  string user_name = 1;
+  int32 id = 2;
+}
+
+message Task0Response {
+  string user_name = 1;
+  int32 id = 2;
+  string data = 3;
+}
+
+message Task1Request {
+  string user_name = 1;
+  int32 id = 2;
+  string data = 3;
+}
+
+message Task1Response {
+  string something = 1;
+}
+
+message Task2Request {
+  string something = 1;
+}
+
+message Task2Response {
+  int32 id = 1;
+  string something = 2;
+}
+
+service ExampleRoute {
+  rpc Task0 (Task0Request) returns (Task0Response) {}
+  rpc Task1 (Task1Request) returns (Task1Response) {}
+  rpc Task2 (Task2Request) returns (Task2Response) {}
+}

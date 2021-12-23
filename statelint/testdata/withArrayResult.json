@@ -1,0 +1,17 @@
+{
+  "StartAt": "No-op",
+  "States": {
+    "No-op": {
+      "Type": "Pass",
+      "ResultPath": "$.coords",
+      "Result": [
+        "foo",
+        "bar",
+        {
+          "bazz": 123
+        }
+      ],
+      "End": true
+    }
+  }
+} 

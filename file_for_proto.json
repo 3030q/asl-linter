@@ -1,0 +1,59 @@
+{
+  "StartAt": "Task0",
+  "States": {
+    "Choice0": {
+      "Choices": [
+        {
+          "BooleanEquals": true,
+          "Comment": "Условие 1",
+          "Next": "Parallel0",
+          "Variable": "$.admin"
+        }
+      ],
+      "Default": "Succeed0",
+      "Type": "Choice"
+    },
+    "Parallel0": {
+      "Branches": [
+        {
+          "StartAt": "Task1",
+          "States": {
+            "Task1": {
+              "End": true,
+              "Resource": "grpc:127.0.0.1:5678:321",
+              "Type": "Task"
+            }
+          }
+        },
+        {
+          "StartAt": "Map0",
+          "States": {
+            "Map0": {
+              "End": true,
+              "Iterator": {
+                "StartAt": "Task2",
+                "States": {
+                  "Task2": {
+                    "End": true,
+                    "Resource": "grpc:127.0.0.1:5678:321",
+                    "Type": "Task"
+                  }
+                }
+              },
+              "Type": "Map"
+            }
+          }
+        }
+      ],
+      "End": true,
+      "Type": "Parallel"
+    },
+    "Succeed0": {
+      "Type": "Succeed"
+    },
+    "Task0": {
+      "Next": "Choice0",
+      "Type": "Task"
+    }
+  }
+}
