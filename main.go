@@ -55,11 +55,11 @@ func main() {
 	}
 	startAtString := startAtInterface.(string)
 
-	states := amazonJsonFile["States"].(map[string]interface{})
-	if states == nil {
+	if amazonJsonFile["States"] == nil {
 		emptyStates()
 		return
 	}
+	states := amazonJsonFile["States"].(map[string]interface{})
 
 	//По сути response -> request структура
 	var steps []string
