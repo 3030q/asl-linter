@@ -101,11 +101,12 @@ func main() {
 			serviceStructure = value.(map[string]interface{})
 		}
 	}
-	serviceBody := serviceStructure["ServiceBody"].([]interface{})
-	if serviceBody == nil {
+
+	if serviceStructure["ServiceBody"] == nil {
 		notFindServiceBody()
 		return
 	}
+	serviceBody := serviceStructure["ServiceBody"].([]interface{})
 
 	actualStateVariable := map[string]string{"start": "true"}
 	for _, step := range steps {
