@@ -2,7 +2,6 @@ package main
 
 import (
 	"github.com/pterm/pterm"
-	"strconv"
 	"time"
 )
 
@@ -25,16 +24,5 @@ func introScreen() {
 		"\nЗа большей информаций можно обращаться в tg @NikitaRybin888 :)" +
 		"\n" +
 		"\nActual date " + pterm.Green(time.Now().Format("02 Jan 2006 - 15:04:05 MST")))
-	pterm.Println()
-	introSpinner, _ := pterm.DefaultSpinner.WithRemoveWhenDone(true).Start("Doing something important...")
-	time.Sleep(time.Second)
-	for i := 3; i > 0; i-- {
-		if i > 1 {
-			introSpinner.UpdateText("Doing something important... " + strconv.Itoa(i) + " seconds...")
-		} else {
-			introSpinner.UpdateText("Doing something important... " + strconv.Itoa(i) + " second...")
-		}
-		time.Sleep(time.Second)
-	}
-	introSpinner.Stop()
+
 }

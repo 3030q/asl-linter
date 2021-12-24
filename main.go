@@ -6,6 +6,7 @@ import (
 	"github.com/pterm/pterm"
 	"io/ioutil"
 	"os"
+	"time"
 )
 
 func parseAsl(fileName string) map[string]interface{} {
@@ -33,6 +34,18 @@ func main() {
 	fmt.Print("Proto3 File Name: ")
 	fmt.Scanln(&protoFileName)
 	fmt.Println()
+
+	introSpinner, _ := pterm.DefaultSpinner.WithRemoveWhenDone(true).Start("Doing something important...")
+	time.Sleep(time.Second)
+	for i := 3; i > 0; i-- {
+		if i > 1 {
+			introSpinner.UpdateText("Doing something important... ")
+		} else {
+			introSpinner.UpdateText("Doing something important... ")
+		}
+		time.Sleep(time.Second)
+	}
+	introSpinner.Stop()
 
 	amazonJsonFile := parseAsl(amazonJsonFileName + ".json")
 	startAtInterface := amazonJsonFile["StartAt"]
