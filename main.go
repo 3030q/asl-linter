@@ -133,7 +133,7 @@ func main() {
 			}
 		}
 		if messageRequestStructure == nil {
-			messageBodyDoesNotExist()
+			messageBodyDoesNotExist(rpcRequestMessageType)
 			return
 		}
 		messageRequestBody := messageRequestStructure["MessageBody"].([]interface{})
@@ -175,7 +175,7 @@ func main() {
 			}
 		}
 		if messageResponseStructure == nil {
-			messageBodyDoesNotExist()
+			messageBodyDoesNotExist(rpcResponseMessageType)
 			return
 		}
 		messageResponseBody := messageResponseStructure["MessageBody"].([]interface{})

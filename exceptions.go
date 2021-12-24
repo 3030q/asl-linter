@@ -32,8 +32,8 @@ func rpcResponseMessageTypeDoesNotExist(rpcName string) {
 	pterm.Error.Println("Не найден тип структуры сообщения для ответа", rpcName)
 }
 
-func messageBodyDoesNotExist() {
-	pterm.Error.Println("Не найдено тип структуры сообщения в proto3 файле")
+func messageBodyDoesNotExist(messageStructName string) {
+	pterm.Error.Println("Не найдено тип структуры сообщения", messageStructName, "в proto3 файле")
 }
 
 func fieldDoesNotExist(field string, messageType string) {
